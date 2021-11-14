@@ -53,7 +53,7 @@ namespace GoogleAnalyticsTry
                                 
                                 RealtimeData response;
 
-                                var request = svc.Data.Realtime.Get("ga:255352475", "rt:activeUsers");
+                                var request = svc.Data.Realtime.Get("ga:xxxx", "rt:activeUsers");
                                 request.Dimensions = "rt:userType,rt:country,rt:trafficType,rt:deviceCategory,rt:city";                           
                                 response = request.Execute();
                                 foreach (var row in response.Rows)
@@ -135,12 +135,12 @@ namespace GoogleAnalyticsTry
 
         static GoogleCredential GetCredential()
         {
-            using (var stream = new FileStream("C://Users/subho//Downloads//verdant-inquiry-331606-6b363acfa2e7.json",
+            using (var stream = new FileStream("C://xxxxxxxxx.json",
                  FileMode.Open, FileAccess.Read))
             {
                 return GoogleCredential.FromStream(stream).CreateScoped(new[] { AnalyticsService.Scope.Analytics,AnalyticsService.Scope.AnalyticsReadonly,AnalyticsReportingService.Scope.AnalyticsReadonly, AnalyticsReportingService.Scope.Analytics });
 
-                //const string loginEmailAddress = "sa-ga-reporting@verdant-inquiry-331606.iam.gserviceaccount.com";
+                //const string loginEmailAddress = "xxxxxxx@yyyyyyyyyy.iam.gserviceaccount.com";
                 //return await GoogleWebAuthorizationBroker.AuthorizeAsync(
                 //    GoogleClientSecrets.FromStream(stream).Secrets,
                 //    new[] { AnalyticsReportingService.Scope.Analytics },
