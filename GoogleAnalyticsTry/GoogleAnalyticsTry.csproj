@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Analytics.v3" Version="1.55.0.1679" />
+    <PackageReference Include="Google.Apis.AnalyticsReporting.v4" Version="1.55.0.2484" />
+  </ItemGroup>
+
+</Project>
